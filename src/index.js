@@ -10,4 +10,7 @@ app.get('/', (req, res) => {
     res.send('Server state: <span style="color: green">ON</span>');
 });
 
+require('./controllers/userController')(app);
+require('./controllers/playerController')(app);
+
 app.listen(3000); 
